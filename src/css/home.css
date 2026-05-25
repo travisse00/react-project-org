@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.h1{
+    background-color: lightblue;
+    padding: 100px;
+    text-align: center;
+    margin: -50;
+    color: white;
+}
+
+#card{
+    display: grid;
+    width: 1300px;
+    justify-content: space-evenly;
+    padding: 20px;
+    grid-template-columns: repeat(4, 3fr);
+    gap: 15px;
+    margin-top: 50px;
+}
+
+.indi{
+    padding: 15px;
+    max-width: 400px;
+    box-shadow: 0 4px 15px gray;
+    border-radius: 7px;
+    min-height: 300px;
+    line-height: 40px;
+}
+
+.indi button{
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(117, 117, 231);
+    color: white;
+    border: 1px solid rgb(117, 117, 231);
+    border-radius: 7px;
+}
+
+#inpt{
+    width: 400px;
+}
+
+#outlet{
+    text-align: center;
+    font-size: large;
+    line-height: 30px;
+}

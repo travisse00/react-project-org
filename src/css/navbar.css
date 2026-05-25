@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.div{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 25px;
+    background-color: rgb(117, 117, 231);
+    color: white;
+}
+
+ul #link{
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    align-items: center;
+    font-size: large;
+    transition: all 0.9s;
+}
+
+ul #link:hover{
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+
+#btn1{
+    padding: 7px;
+    border-radius: 9px;
+    background-color: white;
+    width: 150px;
+    border: 1px solid white;
+    color: blue;
+    transition: all 0.9s;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+#btn1:hover{
+    background-color: blue;
+    color: white;
+    border: 1px solid blue;
+}

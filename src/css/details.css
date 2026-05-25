@@ -1,0 +1,19 @@
+.details{
+    padding: 20px;
+    line-height: 40px;
+}
+
+.details button{
+    width: 250px;
+    padding: 7px;
+    border-radius: 7px;
+    border: 1px solid lightblue;
+    background-color: lightblue;
+    font-weight: 800;
+    color: white;
+    transition: all 0.9s;
+}
+
+.details button:hover{
+    background-color: darkcyan;
+}
