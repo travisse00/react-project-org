@@ -2,6 +2,9 @@ import express from 'express';
 import mongoose from 'mongoose';
 import path from 'path';
 import cors from 'cors';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 import { fileURLToPath } from 'url';
 // import jobs from '../src/Pages/Jobs';
@@ -12,12 +15,12 @@ const __dirname = path.dirname(__filename);
 const app = express();
 
 app.use(cors({
-  origin: "https://react-project-org.onrender.com/"
+  origin: "https://react-project-org.onrender.com"
 }));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-mongoose.connect('mongodb://localhost:27017/Jobs')
+mongoose.connect(process.env.MONGO_URI)
 .then(() => console.log('MongoDB connected ✅'))
 .catch(err => console.error(err));
 
@@ -60,9 +63,9 @@ app.post('/job', async (req, res) => {
         }
         await newJob.save();
 
-        res.status(201).json({ message: "Job created successfully", newJob });
+        
 
-        res.redirect('http://localhost:5173/home/home')
+        res.redirect('https://react-project-org.vercel.app/home/home')
     } catch (error) {
         console.log(error);
         res.status(500).json({ message: "Server error", error });
@@ -83,7 +86,7 @@ app.get('/jobs/:id', async (req, res) => {
     if(!item){
         res.status(404).json({message: "Task not found"});
     } 
-    res.send(item).json();
+    res.json(item);
 });
 
 app.post('/register', async (req, res) => {
@@ -107,9 +110,9 @@ app.post('/login', async (req, res) => {
 
         const user = await User.findOne({ username , password });
 
-        if(!user){ 
-            res.redirect('/src/Pages/Error.jsx')
-        };
+        if(!user){
+            return res.status(401).json({ message: "Invalid credentials" });
+        }
 
         res.status(201).json({message: 'Login succesful'});
 
