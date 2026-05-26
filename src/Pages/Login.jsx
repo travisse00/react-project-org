@@ -36,7 +36,7 @@ function Login() {
         }),
         onSubmit:  async (datas) => {
         try {
-                const response = await fetch('http://localhost:4000/register', {
+                const response = await fetch('https://react-project-org.vercel.app/register', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

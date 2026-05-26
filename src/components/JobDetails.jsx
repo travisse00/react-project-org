@@ -20,6 +20,6 @@ export default JobDetails
 
 export const JobDetailsLoader = async({params}) => {
     const { id } = params;
-    const res = await fetch(`http://localhost:4000/jobs/${ id }`);
+    const res = await fetch(`https://react-project-org.vercel.app/jobs/${ id }`);
     return res.json()
 }
