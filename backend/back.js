@@ -43,7 +43,7 @@ const Jobs = mongoose.model('Jobs', jobSchema);
 app.get('/', (req, res) => {
     res.send(`
         <h1>Home route works ✅</h1>
-        <a href='http://localhost:5173/home/home/addJobs'>Register</a>
+        <a href='https://react-project-org.vercel.app/'>Register</a>
         <a href='/jobs'>View it</a>
         `);
 });
