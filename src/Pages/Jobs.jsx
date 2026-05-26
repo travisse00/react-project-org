@@ -27,7 +27,7 @@ function jobs() {
 export default jobs
 
 export const jobLoader = async () => {
-  const res = await fetch('https://react-project-org.vercel.app/jobs');
+  const res = await fetch('https://react-project-org.onrender.comjobs');
   if (!res.ok) {
         throw new Error('Failed to fetch jobs')
     }

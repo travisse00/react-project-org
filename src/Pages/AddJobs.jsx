@@ -29,7 +29,7 @@ function AddJobs() {
 
         onSubmit: async (values) => {
             try {
-                const response = await fetch('https://react-project-org.vercel.app/job', {
+                const response = await fetch('https://react-project-org.onrender.comjob', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

@@ -36,7 +36,7 @@ function Login() {
         }),
         onSubmit:  async (datas) => {
         try {
-                const response = await fetch('https://react-project-org.vercel.app/register', {
+                const response = await fetch('https://react-project-org.onrender.comregister', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
