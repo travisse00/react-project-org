@@ -26,7 +26,7 @@ function RealLogin() {
             }),
             onSubmit:  async (issues) => {
             try {
-                    const response = await fetch('https://react-project-org.onrender.com/login', {
+                    const response = await fetch('https://react-project-org.onrender.com/register', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
@@ -44,7 +44,7 @@ function RealLogin() {
                 }
             }
         })
-  return (
+    return (
     <div>
         <form onSubmit={formik.handleSubmit}>
             <h1 className='head'>Hire Hub</h1>
@@ -52,13 +52,13 @@ function RealLogin() {
             <h2 className='h2'>Login</h2>
             <input type="text" onChange={formik.handleChange} value={formik.values.username} onBlur={formik.handleBlur} placeholder='Username' name='username'/>
             {formik.touched.username && formik.errors.username && (
-                <p>{formik.errors.username}</p>
+                <p className='add'>{formik.errors.username}</p>
             )}<br />
 
             {/* <label htmlFor="">Password:</label><br /> */}
             <input type="password" onChange={formik.handleChange} value={formik.values.password}  onBlur={formik.handleBlur} name='password' placeholder='Password'/>
             {formik.touched.password && formik.errors.password && (
-                <p>{formik.errors.password}</p>
+                <p className='add'>{formik.errors.password}</p>
             )}<br />
 
 

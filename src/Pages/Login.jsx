@@ -36,7 +36,7 @@ function Login() {
         }),
         onSubmit:  async (datas) => {
         try {
-                const response = await fetch('https://react-project-org.onrender.com/register', {
+                const response = await fetch('https://react-project-org.onrender.com/login', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -61,23 +61,23 @@ function Login() {
             <h2 className='h2'>Create an account</h2>
             <input type="text" onChange={formik.handleChange} value={formik.values.username} onBlur={formik.handleBlur} placeholder='Username' name='username'/>
             {formik.touched.username && formik.errors.username && (
-                <p>{formik.errors.username}</p>
+                <p className='add'>{formik.errors.username}</p>
             )}<br />
 
             <input type="number" onChange={formik.handleChange} value={formik.values.Phone}  onBlur={formik.handleBlur}name='Phone' placeholder='Phone Number'/>
             {formik.touched.Phone && formik.errors.Phone && (
-                <p>{formik.errors.Phone}</p>
+                <p className='add'>{formik.errors.Phone}</p>
             )}<br />
 
             {/* <label htmlFor="">Password:</label><br /> */}
             <input type="password" onChange={formik.handleChange} value={formik.values.password}  onBlur={formik.handleBlur} name='password' placeholder='Password'/>
             {formik.touched.password && formik.errors.password && (
-                <p>{formik.errors.password}</p>
+                <p className='add'>{formik.errors.password}</p>
             )}<br />
 
             <input type="password" onChange={formik.handleChange} value={formik.values.confirmPassword}  onBlur={formik.handleBlur} name='confirmPassword' placeholder='Confirm Password'/>
             {formik.touched.confirmPassword && formik.errors.confirmPassword && (
-                <p>{formik.errors.confirmPassword}</p>
+                <p className='add'>{formik.errors.confirmPassword}</p>
             )}<br />
 
             <p>Already have an account? <Link style={{color: 'blue'}} to={'/Login'}>Login</Link></p>

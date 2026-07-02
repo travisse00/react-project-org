@@ -29,7 +29,7 @@ function AddJobs() {
 
         onSubmit: async (values) => {
             try {
-                const response = await fetch('https://react-project-org.onrender.comjob', {
+                const response = await fetch('http://localhost:4000/job', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

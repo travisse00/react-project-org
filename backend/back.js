@@ -14,13 +14,11 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 
-app.use(cors({
-  origin: "https://react-project-org.onrender.com"
-}));
+app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect('mongodb://localhost:27017/Jobs')
 .then(() => console.log('MongoDB connected ✅'))
 .catch(err => console.error(err));
 
@@ -65,7 +63,7 @@ app.post('/job', async (req, res) => {
 
         
 
-        res.redirect('https://react-project-org.vercel.app/home/home')
+        res.redirect('/home/home')
     } catch (error) {
         console.log(error);
         res.status(500).json({ message: "Server error", error });
