@@ -36,7 +36,7 @@ function Login() {
         }),
         onSubmit:  async (datas) => {
         try {
-                const response = await fetch('https://react-project-org.onrender.com/login', {
+                const response = await fetch('https://react-project-org.onrender.com/register', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

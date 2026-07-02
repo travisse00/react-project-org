@@ -26,7 +26,7 @@ function RealLogin() {
             }),
             onSubmit:  async (issues) => {
             try {
-                    const response = await fetch('https://react-project-org.onrender.com/register', {
+                    const response = await fetch('https://react-project-org.onrender.com/login', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
