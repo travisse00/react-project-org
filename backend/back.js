@@ -18,7 +18,7 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-mongoose.connect('mongodb://localhost:27017/Jobs')
+mongoose.connect('mongodb://olaoluwalawal011_db_user:wCwQ6eZdT71awr8k@ac-c2x7tsh-shard-00-00.t9d8ned.mongodb.net:27017,ac-c2x7tsh-shard-00-01.t9d8ned.mongodb.net:27017,ac-c2x7tsh-shard-00-02.t9d8ned.mongodb.net:27017/?ssl=true&replicaSet=atlas-d9ase0-shard-0&authSource=admin&appName=Cluster0')
 .then(() => console.log('MongoDB connected ✅'))
 .catch(err => console.error(err));
 
